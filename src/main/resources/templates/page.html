@@ -1,8 +1,8 @@
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Chat WebSocket</title>
-    <script src="resources/js/sockjs-0.3.4.js"></script>
-    <script src="resources/js/stomp.js"></script>
+    <script th:src="@{/resources/js/sockjs-0.3.4.js}"></script>
+    <script th:src="@{/resources/js/stomp.js}"></script>
     <script type="text/javascript">
         var stompClient = null;
 
@@ -54,6 +54,7 @@
 <body onload="disconnect()">
 <div>
     <div>
+        <h1>With thymeleaf</h1>
         <input type="text" id="from" placeholder="Choose a nickname"/>
     </div>
     <br />
